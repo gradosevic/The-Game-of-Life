@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/app.css"/>
-</head>
-<body>
-<section class="hero is-dark">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">The Game of Life</h1>
-
-            <h2 class="subtitle">The coding challenge</h2>
-        </div>
-    </div>
-</section>
-<div class="container">
-    <div class="vue-app">
-        <div v-bind:class="{initialized: initialized}" style="display: none">
-            <div v-if="matrix" class="grid" id="grid" :style="{width: (matrix.matrixSize * 20)+'px'}">
-                <div v-for="(row, rowIndex) in matrix?matrix.get():null" class="grid-row">
-                    <div v-for="(column, columnIndex) in row" class="grid-cell"
-                         v-bind:class="{on: matrix.isAlive(rowIndex, columnIndex)}"></div>
+    <head>
+        <meta charset="utf-8">
+        <title>The Game of Life - The coding challenge</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="dist/app.css"/>
+    </head>
+    <body>
+        <section class="hero is-dark">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title">The Game of Life</h1>
+                    <h2 class="subtitle">The coding challenge</h2>
                 </div>
             </div>
-            <p class="buttons">
-                <a class="button is-primary" @click="matrix.buildMatrix()">
-                <span class="icon">
-                  <i class="fas fa-sync"></i>
-                </span>
-                    <span>New</span>
-                </a>
-                <a v-if="interval" class="button is-primary" @click="stop">
-                <span class="icon">
-                  <i class="fas fa-stop"></i>
-                </span>
-                    <span>Stop</span>
-                </a>
-                <a v-if="!interval" class="button is-primary" @click="start">
-                <span class="icon">
-                  <i class="fas fa-play"></i>
-                </span>
-                    <span>Start</span>
-                </a>
-                <a class="button is-primary" @click="expandGrid">
-                <span class="icon">
-                  <i class="fas fa-plus-circle"></i>
-                </span>
-                    <span>Expand</span>
-                </a>
-                <a class="button is-primary" @click="shrinkGrid">
-                <span class="icon">
-                  <i class="fas fa-minus-circle"></i>
-                </span>
-                    <span>Shrink</span>
-                </a>
-            </p>
+        </section>
+        <div class="container">
+            <div class="vue-app">
+                <div v-bind:class="{initialized: initialized}" style="display: none">
+                    <div v-if="matrix" class="grid" id="grid" :style="{width: (matrix.matrixSize * 20)+'px'}">
+                        <div v-for="(row, rowIndex) in matrix?matrix.get():null" class="grid-row">
+                            <div v-for="(column, columnIndex) in row" class="grid-cell"
+                                 v-bind:class="{on: matrix.isAlive(rowIndex, columnIndex)}"></div>
+                        </div>
+                    </div>
+                    <p class="buttons">
+                        <a class="button is-primary" @click="matrix.buildMatrix()">
+                        <span class="icon">
+                          <i class="fas fa-sync"></i>
+                        </span>
+                            <span>New</span>
+                        </a>
+                        <a v-if="interval" class="button is-primary" @click="stop">
+                        <span class="icon">
+                          <i class="fas fa-stop"></i>
+                        </span>
+                            <span>Stop</span>
+                        </a>
+                        <a v-if="!interval" class="button is-primary" @click="start">
+                        <span class="icon">
+                          <i class="fas fa-play"></i>
+                        </span>
+                            <span>Start</span>
+                        </a>
+                        <a class="button is-primary" @click="expandGrid">
+                        <span class="icon">
+                          <i class="fas fa-plus-circle"></i>
+                        </span>
+                            <span>Expand</span>
+                        </a>
+                        <a class="button is-primary" @click="shrinkGrid">
+                        <span class="icon">
+                          <i class="fas fa-minus-circle"></i>
+                        </span>
+                            <span>Shrink</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-<script>
-
-</script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-<script src="dist/app.js"></script>
-</body>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+        <script src="dist/app.js"></script>
+    </body>
 </html>
