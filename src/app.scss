@@ -1,0 +1,34 @@
+@import '~bulma/bulma';
+@import '~font-awesome/scss/font-awesome';
+
+.vue-app{
+  .initialized{
+    display: block !important;
+  }
+}
+#grid{
+  margin: auto;
+  margin-top: 40px;
+}
+.grid-row{
+  width: 100%;
+  clear: left;
+}
+.grid-cell{
+  border: 1px solid;
+  width: 20px;
+  height: 20px;
+  float: left;
+  &.on{
+    background: #999;
+  }
+}
+.buttons{
+  width: 400px;
+  clear: both;
+  margin: auto;
+  margin-top: 80px;
+  .button{
+    margin:auto;
+  }
+}
