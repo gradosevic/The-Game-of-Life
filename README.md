@@ -2,7 +2,7 @@
 
 A simple implementation of the Conway's Game of Life.
 
-## Technologies used 
+## Technologies 
 
  The game is implemented in ES6 and Vue.js. Bulma was used for layout and front-end components and Font Awesome for icons.
  Laravel mix based on webpack was used for the resource compiling and Jest for the tests.
@@ -42,7 +42,7 @@ or
 npm run test
 ```
 
-## How to use
+## How to Use
 
 Click on the Start button to start the game
 
