@@ -1,6 +1,6 @@
 ## Overview
 
-A simple implementation of Conway's Game of Life.
+A simple implementation of the Conway's Game of Life.
 
 ## Technologies used 
 
@@ -13,21 +13,21 @@ A simple implementation of Conway's Game of Life.
 First, run this command to install all dependencies
 
 ```
-**yarn**
+yarn
 ```
 or
 ```
-**npm i**
+npm i
 ```
 
 After that, run this command to build the project
 
 ```
-**yarn production**
+yarn production
 ```
 or
 ```
-**npm run production**
+npm run production
 ```
 
 ## Running Tests
@@ -35,11 +35,11 @@ or
 To run tests
  
 ```
-**yarn test**
+yarn test
 ```
 or
 ```
-**npm run test**
+npm run test
 ```
 
 ## How to use
